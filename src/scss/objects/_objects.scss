@@ -1,12 +1,13 @@
 @import '../tools/tools.scss';
 @import '../settings/settings.scss';
 
-.header{height: 100vh;background-image: url('../images/banner.jpg');background-size: cover;background-repeat: no-repeat;}
+.header{position:relative;background-image: url('../images/banner.jpg');background-size: cover;background-repeat: no-repeat;}
 .nav{display: none;text-align:center;justify-content:center;align-items:center;position: fixed;top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;z-index: 1;background-color: rgba(0,0,0,0.8);transition: .5s ease;}
 .flex{display: flex;}
-.headerWrap{}
-.headerP{color: $gray;font-size: 1.25em;margin-bottom: 1.75em;text-transform: uppercase;text-align: center;}
-.toggleMenu {@include transform(rotate(0deg));@include transition(.5s ease-in-out);float:left;z-index:3;width: 35px;height: 25px;position: relative;margin: 20px;cursor: pointer;}
+.headerWrap{position:relative;z-index: 1;padding: 4em 2em 4em 2em;}
+.headerP{color: $gray;font-size: 1.25em;line-height:1.75;margin-bottom: 1.75em;text-transform: uppercase;text-align: center;}
+.button{@include buttonTemp();}
+.toggleMenu {@include transform(rotate(0deg));@include transition(.5s ease-in-out);float:left;z-index:3;width: 35px;height: 25px;position: absolute;top:0;left:0;margin: 20px;cursor: pointer;}
 .toggleMenu span {@include transform(rotate(0deg));display: block;position: absolute;height: 5px;width: 100%;background: #fff;opacity: 1;left: 0;@include transition(.25s ease-in-out);}
 .toggleMenu span:nth-child(1) {top: 0px;@include transform-origin(left center);}
 .toggleMenu span:nth-child(2) {top: 10px;@include transform-origin(left center);}

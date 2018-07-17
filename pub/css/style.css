@@ -46,8 +46,7 @@ table {
   z-index: 1;
   width: 100%;
   text-align: center;
-  position: absolute;
-  top: 20%; }
+  padding: 30px 0; }
 
 .overlay {
   position: absolute;
@@ -55,7 +54,7 @@ table {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.4); }
 
 h1 {
   font-size: 2.5em;
@@ -70,7 +69,7 @@ a {
   text-decoration: none; }
 
 .header {
-  height: 100vh;
+  position: relative;
   background-image: url("../images/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
@@ -94,12 +93,38 @@ a {
 .flex {
   display: flex; }
 
+.headerWrap {
+  position: relative;
+  z-index: 1;
+  padding: 4em 2em 4em 2em; }
+
 .headerP {
   color: #aaa;
   font-size: 1.25em;
+  line-height: 1.75;
   margin-bottom: 1.75em;
   text-transform: uppercase;
   text-align: center; }
+
+.button {
+  background: linear-gradient(#f32853, #650000);
+  color: #fff;
+  font-size: 1.35em;
+  font-weight: 700;
+  line-height: 1.25em;
+  height: 1.15em;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  transition: .5s ease-in;
+  width: 100%;
+  cursor: pointer; }
+  .button:hover {
+    border-radius: 50px;
+    transition: .5s ease-in; }
 
 .toggleMenu {
   -webkit-transform: rotate(0deg);
@@ -114,7 +139,9 @@ a {
   z-index: 3;
   width: 35px;
   height: 25px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 20px;
   cursor: pointer; }
 

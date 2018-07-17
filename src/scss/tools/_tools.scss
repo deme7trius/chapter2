@@ -1,11 +1,11 @@
 
-@mixin buttonTemp($buttonbc:#f32853, $buttonc:$red,$buttonfs: 1.35em){
-	background-color: $buttonbc;
+@mixin buttonTemp($buttonbc:$red, $buttonc:$white,$buttonfs: 1.35em){
+	background: linear-gradient($buttonbc, $gradientC2);
 	color: $buttonc;
 	font-size: $buttonfs;
 	font-weight: 700;
-	line-height: 3.25em;
-	height: 3.15em;
+	line-height: 1.25em;
+	height: 1.15em;
 	text-align: center;
 	display: inline-block;
 	text-decoration: none;
@@ -13,6 +13,12 @@
 	border: 0;
 	border-radius: 4px;
 	transition: .5s ease-in;
+	width: 100%;
+	cursor: pointer;
+	&:hover{
+		border-radius: 50px;
+		transition: .5s ease-in;
+	}
 }
 @mixin transform($property){
   -webkit-transform: $property;
