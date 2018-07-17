@@ -1,0 +1,1 @@
+function toggle(){var e=document.getElementById("toggleMenu"),t=document.getElementsByClassName("nav");e.classList.toggle("open"),t[0].classList.toggle("flex"),console.log(1)}

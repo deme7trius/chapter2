@@ -1,0 +1,39 @@
+
+@mixin buttonTemp($buttonbc:#f32853, $buttonc:$red,$buttonfs: 1.35em){
+	background-color: $buttonbc;
+	color: $buttonc;
+	font-size: $buttonfs;
+	font-weight: 700;
+	line-height: 3.25em;
+	height: 3.15em;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 4px;
+	transition: .5s ease-in;
+}
+@mixin transform($property){
+  -webkit-transform: $property;
+      -ms-transform: $property;
+       -o-transform: $property;
+          transform: $property;
+}
+@mixin transform-origin($property){
+  -webkit-transform-origin: $property;
+      -ms-transform-origin: $property;
+       -o-transform-origin: $property;
+          transform-origin: $property;
+}
+@mixin transition($property){
+  -webkit-transition: $property;
+      -ms-transition: $property;
+       -o-transition: $property;
+          transition: $property;
+}
+
+%roundImage{
+	border: solid 0.5em rgba(144, 144, 144, 0.25);
+	border-radius: 50%;
+}
