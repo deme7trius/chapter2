@@ -38,7 +38,12 @@
        -o-transition: $property;
           transition: $property;
 }
-
+%headingStyle{
+	font-weight: bold;text-transform: uppercase;
+}
+%pStyle1{
+	color: $gray;font-size: 1.25em;line-height:1.75;margin-bottom: 1.75em;text-transform: uppercase;text-align: center;
+}
 %roundImage{
 	border: solid 0.5em rgba(144, 144, 144, 0.25);
 	border-radius: 50%;

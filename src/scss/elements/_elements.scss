@@ -1,4 +1,6 @@
 @import '../settings/settings.scss';
+@import '../tools/tools.scss';
 
-h1{font-size:$fontH1;color: $white;font-weight: bold;text-transform: uppercase;}
+h1{font-size:$fontH1;color: $white;@extend %headingStyle;}
+h2{font-size:$fontH2;color: $darkH2;@extend %headingStyle;}
 a{color: $white;display: block;padding: 0.75em 0;text-decoration: none;}
