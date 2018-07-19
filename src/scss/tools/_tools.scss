@@ -1,7 +1,5 @@
 
-@mixin buttonTemp($buttonbc:$red, $buttonc:$white,$buttonfs: 1.35em){
-	background: linear-gradient($buttonbc, $gradientC2);
-	color: $buttonc;
+@mixin buttonTemp($buttonbc:$red,$buttonc:$white,$buttonfs: 1.35em){
 	font-size: $buttonfs;
 	font-weight: 700;
 	line-height: 1.25em;
@@ -15,6 +13,13 @@
 	transition: .5s ease-in;
 	width: 100%;
 	cursor: pointer;
+	&--red{
+	background: linear-gradient($buttonbc, $gradientC2);
+	color: $buttonc;
+	}
+	&--dark{
+		background: linear-gradient($darkGray, $black);
+	}
 	&:hover{
 		border-radius: 50px;
 		transition: .5s ease-in;
