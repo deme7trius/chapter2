@@ -24,25 +24,54 @@
 	z-index: 1;
 	background-color: rgba(0,0,0,0.8);
 	transition: .5s ease;
+	@include vw(m){
+		display: flex;
+		position: absolute;
+		background-color: rgba(0,0,0,0);
+		justify-content: flex-start;
+		align-items: flex-start;
+	    bottom: auto;
+	    right: auto;
+	    height: auto;
 	}
+	}
+.menu{
+	@include vw(m){
+		display: flex;
+		li{
+			padding: 0 10px;
+		}
+	}
+}
 .headerWrap{
 	text-align: center;
 	position:relative;
 	z-index: 1;
 	padding: 4em 2em 4em 2em;
+	@include vw(l){
+		padding: 6em 3em;
+	}
+	@include vw(xl){
+		padding: 13em 10em;
+	}
 }
 .wrap{
 	max-width: 90%;
 	width: 100%;
 	margin: 0 auto;
+	@include vw(xl){
+		max-width: 1200px;
+	}
 }
 .normal{
-	font-size: $fontNormal;
 	line-height: 2;
 	color: $colorNormal;
     margin-bottom: 1.75em;
 }
 .toggleMenu {
+	@include vw(m){
+		display: none;
+	}
 	@include transform(rotate(0deg));
 	@include transition(.5s ease-in-out);
 	float:left;
@@ -54,8 +83,6 @@
 	left:0;
 	margin: 20px;
 	cursor: pointer;
-}
-.toggleMenu {
 	 span{
 	 	@include transform(rotate(0deg));
 		display: block;
@@ -66,11 +93,6 @@
 		opacity: 1;
 		left: 0;
 		@include transition(.25s ease-in-out);
-	 }
-			
-}
-.toggleMenu  {
-	span{
 		&:nth-child(1){
 			top: 0px;
 			@include transform-origin(left center);
@@ -116,6 +138,7 @@
 	flex-direction:column;
 	.text{
 		text-align: center;
+		padding: 20px;
 	}
 	&--image{
 		max-width: 150px;
@@ -126,8 +149,8 @@
 	}
 	&--plus{
 		@extend .plus;
-		font-size: $fontP1;
 		text-align: unset;
+		font-size: 16px;
 	}
 	&--heading1{
 		@extend .heading1;
@@ -137,7 +160,7 @@
 	}
 	&--normal{
 		@extend .normal;
-		font-size: $fontNormal;
+		font-size: 14px;
 		color: $colorNormal;
 		letter-spacing: 1px;
 	}

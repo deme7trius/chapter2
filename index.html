@@ -9,7 +9,7 @@
 </head>
 <body class="body">
 		<!-- Header -->
-			<header class="header" role="banner">
+			<header class="header" role="group">
 				<div class="headerWrap">
 			<div class="toggleMenu" id="toggleMenu" onclick="toggle()">
 				<span></span>
@@ -17,11 +17,11 @@
 				<span></span>
 			</div>
 				<h1 class="heading1">Tutorial 101</h1>
-				<nav class="nav" role="navigation">
-					<ul aria-label="Menu Bar">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+				<nav class="nav" role="doc-pagelist">
+					<ul aria-label="Menu Bar" class="menu">
+						<li><a href="#" role="menuitem">Home</a></li>
+						<li><a href="#" role="menuitem">Generic</a></li>
+						<li><a href="#" role="menuitem">Elements</a></li>
 					</ul>
 				</nav>
 			<p class="plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!</p>
@@ -29,26 +29,32 @@
 				</div>
 				<div class="overlay"></div>
 			</header>
-			<main class="main" role="main">
-				<section class="textContent">
+			<main class="main">
+				<section class="textContent" role="contentinfo">
 					<div class="wrap">
-						<h2 class="heading1">Lorem ipsum dolor</h2>
-						<p class="plus">Lorem ipsum dolor sin</p>
-						<p class="normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!</p>
-						<p class="normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!</p>
+						<div class="flexWrap">
+							<div class="left">
+								<h2 class="heading1">Lorem ipsum dolor dolor dolor</h2>
+								<p class="plus">Lorem ipsum dolor sin</p>
+							</div>
+							<div class="right">
+								<p class="normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!</p>
+								<p class="normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis tempore, minima fugiat omnis!</p>
+							</div>
+						</div>
 					</div>
 				</section>
-				<section class="imageText">
+				<section class="imageText" role="presentation">
 					<div class="wrap">
 						<h2 class="heading1">Lorem ipsum dolor</h2>
 						<p class="imageText--plus">Lorem title Test Number n</p>
 						<div class="boxContainer">
 							<div class="box">
-								<img class="box--image" src="pub/images/pic02.jpg">
+								<img class="box--image" src="pub/images/pic02.jpg" alt="Beach image">
 								<h2 class="box--heading">Lorem ipsum dolor</h2>
 							</div>
 							<div class="box">
-								<img class="box--image" src="pub/images/pic03.jpg">
+								<img class="box--image" src="pub/images/pic03.jpg" alt="Forest image">
 								<h2 class="box--heading">Lorem ipsum dolor</h2>
 							</div>
 							<a class="button button--red">Red button</a>
@@ -56,37 +62,37 @@
 						</div>
 					</div>
 				</section>
-				<section class="roundImages">
+				<section class="roundImages" role="feed">
 					<div class="wrap">
 						<h2 class="heading1">Lorem ipsum dolor round images</h2>
 						<p class="plus">Lorem ipsum dolor sit amet.</p>
 						<div class="flexContainer">
-							<div class="article flex">
-								<img src="pub/images/pic03.jpg" alt="" class="article--image">
+							<div class="article flex" role="presentation">
+								<img src="pub/images/pic03.jpg" alt="Forest" class="article--image">
 								<div class="text">
 									<h3 class="article--heading1">Lorem ipsum dolor sit.</h3>
 									<p class="article--plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, in.</p>
 									<p class="article--normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
 								</div>
 							</div>
-							<div class="article flex">
-								<img src="pub/images/pic04.jpg" alt="" class="article--image">
+							<div class="article flex" role="presentation">
+								<img src="pub/images/pic04.jpg" alt="Mountain" class="article--image">
 								<div class="text">
 									<h3 class="article--heading1">Lorem ipsum dolor sit.</h3>
 									<p class="article--plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, in.</p>
 									<p class="article--normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
 								</div>
 							</div>
-							<div class="article flex">
-								<img src="pub/images/pic05.jpg" alt="" class="article--image">
+							<div class="article flex" role="presentation">
+								<img src="pub/images/pic05.jpg" alt="Roads" class="article--image">
 								<div class="text">
 									<h3 class="article--heading1">Lorem ipsum dolor sit.</h3>
 									<p class="article--plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, in.</p>
 									<p class="article--normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
 								</div>
 							</div>
-							<div class="article flex">
-								<img src="pub/images/pic06.jpg" alt="" class="article--image">
+							<div class="article flex" role="presentation">
+								<img src="pub/images/pic06.jpg" alt="Road" class="article--image">
 								<div class="text">
 									<h3 class="article--heading1">Lorem ipsum dolor sit.</h3>
 									<p class="article--plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, in.</p>
@@ -97,7 +103,7 @@
 					</div>
 				</section>
 			</main>
-			<aside class="aside" role="complementary">
+			<aside class="aside" role="note">
 				<div class="headerWrap">
 					<h1 class="aside--heading1">Lorem ipsum dolor sit.</h1>
 					<p class="plus">Lorem ipsum dolor sit amet, consectetur.</p>
@@ -105,21 +111,21 @@
 				</div>
 					<div class="overlay"></div>
 			</aside>
-			<footer class="footer" role="contentinfo">
+			<footer class="footer" role="group">
 				<div class="wrap">
 					<div class="socialIcons">
-						<a href="" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="" class="twitter"><i class="fa fa-twitter"></i>
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i>
 
 </a>
-						<a href="" class="instagram"><i class="fa fa-instagram"></i>
+						<a href="#" class="instagram"><i class="fa fa-instagram"></i>
 
 </a>
 					</div>
 					<div class="addtitionalLinks">
-						<a href="" class="addtitionalLinks--link">Some link</a>
-						<a href="" class="addtitionalLinks--link">Next link</a>
-						<a href="" class="addtitionalLinks--link">Third one</a>
+						<a href="#" class="addtitionalLinks--link">Some link</a>
+						<a href="#" class="addtitionalLinks--link">Next link</a>
+						<a href="#" class="addtitionalLinks--link">Third one</a>
 					</div>
 				</div>
 			</footer>

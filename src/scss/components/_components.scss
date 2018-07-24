@@ -35,6 +35,20 @@
     align-items: center;
     }
 }
+.flexWrap{
+	@include vw(xl){
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 100px 0;
+    .plus, .heading1{text-align:left;}
+    }
+}
+@include vw(xl){
+	.left, .right{width: 100%;}
+}
 .overlay{
 	position: absolute;
 	left: 0;
