@@ -25,19 +25,11 @@
 	background-color: rgba(0,0,0,0.8);
 	transition: .5s ease;
 	}
-.flex{
-	display: flex;
-}
 .headerWrap{
+	text-align: center;
 	position:relative;
 	z-index: 1;
 	padding: 4em 2em 4em 2em;
-}
-.plus{
-	@extend %pStyle1;
-}
-.button{
-	@include buttonTemp();
 }
 .wrap{
 	max-width: 90%;
@@ -120,31 +112,127 @@
 	.button--red{margin-bottom: 30px;}
 }
 .article{
-	display: flex;
 	flex-wrap: wrap;
 	flex-direction:column;
+	.text{
+		text-align: center;
+	}
 	&--image{
-		max-width: 200px;
+		max-width: 150px;
 		width: 100%;
 		margin: 10px auto;
-		min-height: 200px;
+		min-height: 150px;
 		@extend %roundImage;
 	}
 	&--plus{
 		@extend .plus;
 		font-size: $fontP1;
+		text-align: unset;
 	}
 	&--heading1{
 		@extend .heading1;
 		font-size: $fontH3;
 		letter-spacing: 1px;
+		text-align: unset;
 	}
 	&--normal{
 		@extend .normal;
 		font-size: $fontNormal;
-		text-align: center;
 		color: $colorNormal;
 		letter-spacing: 1px;
 	}
-
+	@include vw(l){
+		.text{
+			text-align: right;
+		}
+		flex-wrap: nowrap;
+		flex-direction: row;
+		&--image{
+			align-self: center;
+		}
+		&:nth-child(odd){
+			flex-direction: row-reverse;
+			.text{
+			text-align: left;
+			}
+		}
+	}
+	@include vw(xl){
+		width: 48%;
+		margin: 0 0 0 2%;
+		&:nth-child(odd){
+			margin: 0 2% 0 0;
+		}
+	}
 }
+.box{
+	background-color: $white;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+    margin-bottom: 30px;
+	&--image{
+		width: 100%;
+	}
+	.heading1{box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.15);
+	}
+	&--heading{@extend .heading1;font-size: $fontH3;
+	}
+}
+.aside{
+	@extend .header;
+	&--heading1{@extend .heading1;color: $white;}
+}
+.socialIcons{
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    @include vw(m){
+    	padding: 0 0 20px 0;
+    }
+}
+.addtitionalLinks{
+	display: flex;
+	align-items:center;
+	flex-direction: column;
+	&--link{
+		text-align: center;
+		font-size: $fontP2;
+		color: $darkGray;
+		padding: 0.5em 0;
+		@include transition(.5s ease-in-out);
+		&:hover{
+			text-decoration: underline;
+			@include transition(.5s ease-in-out);
+		}
+		@include vw(m){
+			flex:1;
+			line-height: 0.3em;
+			&:nth-child(even){
+				border-left: 1px solid $darkGray;
+				border-right: 1px solid $darkGray;
+			}
+		}
+	}
+	@include vw(m){
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	}
+	@include vw(m){
+		.boxContainer{
+			display: flex;
+			align-content: stretch;
+			justify-content:space-around;
+			flex-wrap: wrap;
+			.box{
+				width:45%;
+			}
+			.button{
+				width:45%;			}
+		}
+	}

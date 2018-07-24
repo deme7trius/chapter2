@@ -24,6 +24,9 @@
 		border-radius: 50px;
 		transition: .5s ease-in;
 	}
+	@include vw(m){
+		max-width: 320px;
+	}
 }
 @mixin transform($property){
   -webkit-transform: $property;
@@ -42,6 +45,16 @@
       -ms-transition: $property;
        -o-transition: $property;
           transition: $property;
+}
+@mixin vw($breakpoint){
+	@if(map-has-key($breakpoints, $breakpoint)){
+		@media (min-width: #{map-get($breakpoints, $breakpoint)}){
+			@content;
+		}
+	} 
+	@else { 
+		@warn "No such `#{$breakpoint}`. ";
+	}
 }
 %headingStyle{
 	font-weight: bold;text-transform: uppercase;
